@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+body{font-family: 'Poppins', sans-serif;}
+
+header{
+    height:100vh;
+    background:black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: whitesmoke;
+}
+.logo h2{
+    color: white;
+    font-size: 3.2rem;
+    margin:0;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 8%;
+}
+nav ul{
+    list-style-type: none;
+}
+nav ul li{
+    
+    display: inline-block;
+    margin-left: 2.5rem;
+    font-size: 1.2rem;
+}
+nav ul li a {
+    color: whitesmoke;
+font-size: 1.6rem;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    color:white;
+    transition: .5s ease-in-out;
+}
+nav ul li a::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .3s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.Flex{
+        display: flex;
+        justify-content: space-between;
+       flex-wrap: wrap;
+        width: 80%;
+        margin: auto;
+       position: relative;
+       top:20%;
+    }
+h1{
+    font-size: 3.6rem;
+    font-weight: 800;   
+    color:white;
+padding:1.2rem ;
+max-width: 40%;
+}
+p{
+    font-size: 1.5rem;
+    font-weight: 300;
+    color:white;
+    max-width: 30%;
+    text-align: justify;
+    left: 11%;
+    top:-3%; 
+    position: relative;
+
+}
+
+.btn{
+    display: inline-block;
+    background: #fff;
+    color: #000;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: .5s ease-in-out;
+    position: absolute;
+    top: 67%;
+    left: 20%;
+    }
+.btn:hover{
+    background: linear-gradient(45deg, #1f004e, #7447bc, #f7c0bd);
+    color: #fff;
+    transition: .5s ease-in-out;
+}
+    img{
+        height: auto;
+        max-width: 40%;
+        box-shadow: 10px 10px 5px 5px white;
+        border-radius: 10px;
+    }
+   
+    .Flex img:hover{
+        transform: scale(1.1);
+        transition: .5s ease-in-out;
+    }
