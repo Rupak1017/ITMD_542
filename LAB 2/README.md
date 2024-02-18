@@ -8,6 +8,9 @@ Class: ITMD 542, Lab 2
 
 Repository URL: https://github.com/Rupak1017/ITMD_542/
 
+Working Website hosted on render :- https://crud-app-msnj.onrender.com/
+In case problem with installation.
+
 ## Project Description
 This assignment was designed to showcase how to use, and the usefulness, of nodejs and express js.
 It is a simple Contacts database that has all major CRUD operations.
@@ -26,6 +29,7 @@ To install and run this app do the following:
 3. Run the command `npm install` to install needed dependencies
 4. Run the command `npm run start` to start the application
 5. You can access the app at the web address `localhost:3000`
+6. Can view the Website https://crud-app-msnj.onrender.com/ in case problem with installation.
 
 ## Insights and Results 
 I think this assignment did a good job showing me how to utilize Node JS and some of its features better. Along with the efficiency that comes with using express js.
