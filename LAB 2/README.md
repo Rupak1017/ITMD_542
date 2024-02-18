@@ -31,5 +31,3 @@ To install and run this app do the following:
 I think this assignment did a good job showing me how to utilize Node JS and some of its features better. Along with the efficiency that comes with using express js.
 I didnt have many difficulties, and mainly just needed time putting all the pieces together.
 
-## References
-I didnt really use any external sources, I learned everything I needed to from watching the lecture recordings or reading official documentation.
