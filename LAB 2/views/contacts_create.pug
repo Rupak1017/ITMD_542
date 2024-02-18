@@ -1,0 +1,44 @@
+extends layout
+block style
+  link(rel='stylesheet', href='/stylesheets/navbar-fixed.css')
+
+block content
+  nav(class="navbar navbar-expand-md navbar-dark fixed-top bg-dark")
+    div(class="container-fluid")
+      a(class="navbar-brand", href="#") Fixed navbar
+      button(class="navbar-toggler", type="button", data-bs-toggle="collapse", data-bs-target="#navbarCollapse", aria-controls="navbarCollapse", aria-expanded="false", aria-label="Toggle navigation")
+        span(class="navbar-toggler-icon")
+
+      div(class="collapse navbar-collapse", id="navbarCollapse")
+        ul(class="navbar-nav me-auto mb-2 mb-md-0")
+          li(class="nav-item")
+            a(class="nav-link", aria-current="page", href="/") Home
+
+          li(class="nav-item")
+            a(class="nav-link", href="/contacts") Contacts
+
+  main(class="container")
+    div(class="bg-light p-5 rounded")
+      h1= title
+      p Please enter the new contact information.
+        if message
+          ul
+            each value in message
+              li(class="text-danger")=value.msg
+
+      form(method='POST', action='/contacts/create')
+        div(class="form-row")
+          div(class="form-group col-md-6")
+            label(for="firstName") First Name
+            input(type="text", required, class="form-control", name="firstName" id="firstName", placeholder="First Name")
+          div(class="form-group col-md-6")
+            label(for="lastName") Last Name
+            input(type="text", required, class="form-control", name="lastName", id="lastName", placeholder="Last Name")
+        div(class="form-group")
+          label(for="email") Email
+          input(type="email", required, class="form-control", name="email", id="email", placeholder="email@website.com")
+        div(class="form-group")
+          label(for="notes") Note
+          textarea(class="form-control", id="notes", name="notes", rows="3", placeholder='Notes - Can be blank')
+        button(type="submit", class="btn btn-primary") Create Contact
+        a(href='/contacts/', class="btn btn-danger") Cancel
