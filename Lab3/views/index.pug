@@ -1,0 +1,30 @@
+extends layout
+
+block style
+  link(rel='stylesheet', href='/stylesheets/cover.css')
+
+block content
+    div(class="site-wrapper")
+      div(class="site-wrapper-inner")
+        div(class="cover-container")
+          div(class="inner cover")
+            h1(class="cover-heading") Welcome to #{title}!
+              h2 What is Lab 3?
+              p(class="lead").
+                This Lab assignment involves building off of Lab 3. This time the app uses
+                an SQLite database instead of a json file with save and load functionality.
+              p(class="lead").
+                Click the button below to see it for yourself!
+              a(href='/contacts', class="btn btn-lg btn-default btn-main") Enter the database!
+
+          div(class="mastfoot")
+            div(class="inner")
+              p Contact me at akamenovic(at)hawk.iit.edu or on Github with any questions or concerns
+            
+          
+
+        
+
+      
+
+    

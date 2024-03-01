@@ -1,0 +1,50 @@
+extends layout
+
+block style
+  link(rel='stylesheet', href='/stylesheets/navbar-fixed.css')
+
+block content
+  nav(class="navbar navbar-expand-md navbar-dark fixed-top bg-dark")
+    div(class="container-fluid")
+      a(class="navbar-brand", href="#") Fixed navbar
+      button(class="navbar-toggler", type="button", data-bs-toggle="collapse", data-bs-target="#navbarCollapse", aria-controls="navbarCollapse", aria-expanded="false", aria-label="Toggle navigation")
+        span(class="navbar-toggler-icon")
+
+      div(class="collapse navbar-collapse", id="navbarCollapse")
+        ul(class="navbar-nav me-auto mb-2 mb-md-0")
+          li(class="nav-item")
+            a(class="nav-link", aria-current="page", href="/") Home
+
+          li(class="nav-item")
+            a(class="nav-link", href="/contacts") Contacts
+
+  main(class="container")
+    div(class="bg-light p-5 rounded")
+      h1= title
+      p Are you sure you want to delete the following contact?
+
+      form(method='POST', action=`/contacts/${contact.id}/delete`)
+        div(class="form-group")
+          label(for="id") Contact ID
+          input(type="text", class="form-control", name="id" id="id", disabled, value= contact.id)
+        div(class="form-row")
+          div(class="form-group col-md-6")
+            label(for="first_name") First Name
+            input(type="text", class="form-control", name="first_name", disabled, id="first_name", value= contact.first_name)
+          div(class="form-group col-md-6")
+            label(for="last_name") Last Name
+            input(type="text", class="form-control", name="last_name", disabled, id="last_name", value= contact.last_name)
+        div(class="form-group")
+          label(for="email") Email
+          input(type="email", class="form-control", name="email", disabled, id="email", value= contact.email)
+        div(class="form-group")
+          label(for="notes") Notes
+          textarea(class="form-control", id="notes", name="notes", disabled, rows="3")= contact.notes
+        div(class="form-group")
+          label(for="creation") Date and Time of creation
+          input(type="text", class="form-control", name="creation" id="creation", disabled, value= contact.creation)
+        div(class="form-group")
+          label(for="modified") Last modified
+          input(type="text", class="form-control", name="modified" id="modified", disabled, value= contact.modified)
+        button(type='submit', class="btn btn-danger") Confirm
+        a(href='/contacts/', class="btn btn-primary") Cancel
