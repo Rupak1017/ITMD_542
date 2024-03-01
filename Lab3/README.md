@@ -26,7 +26,7 @@ Editor used: Visual Studio Code
 ## Installation Instructions
 To install and run this app do the following:
 1. Download or clone the repository
-2. Once extracted or cloned, enter the Lab2 directory of the ITMD 542 repository with the terminal
+2. Once extracted or cloned, enter the Lab3 directory of the ITMD 542 repository with the terminal
 3. Run the command `npm install` to install needed dependencies
 4. Install 'npm install sqlite3'.
 4. Run the command `npm run start` to start the application
